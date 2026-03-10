@@ -1,0 +1,20 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+venv/
+.env
+
+# Reports
+sample_output/*.json
+sample_output/*.csv
+
+# AWS credentials — NEVER commit these
+.aws/
+credentials
+*.pem
+*.key
+
+# IDE
+.vscode/
+.idea/

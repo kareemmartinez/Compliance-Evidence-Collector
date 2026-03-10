@@ -1,0 +1,43 @@
+# NIST SP 800-53 Rev 5 — Control Reference
+
+This document maps each check in the Compliance Evidence Collector to its corresponding NIST 800-53 control family.
+
+## Control Families Used in This Tool
+
+### AC — Access Control
+| Control | Name | Why It's Checked |
+|---|---|---|
+| AC-2 | Account Management | Ensure accounts are reviewed, inactive accounts disabled, and access is appropriate |
+| AC-3 | Access Enforcement | Enforce approved authorizations for logical access |
+
+### AU — Audit and Accountability
+| Control | Name | Why It's Checked |
+|---|---|---|
+| AU-2 | Audit Events | Systems must log security-relevant events |
+| AU-9 | Protection of Audit Information | Logs must be protected from tampering or deletion |
+
+### CM — Configuration Management
+| Control | Name | Why It's Checked |
+|---|---|---|
+| CM-6 | Configuration Settings | Systems must follow documented secure baselines |
+| CM-7 | Least Functionality | Only necessary services, ports, and protocols should be enabled |
+
+### IA — Identification and Authentication
+| Control | Name | Why It's Checked |
+|---|---|---|
+| IA-2 | Identification and Authentication | Users must be uniquely identified; MFA is required for privileged accounts |
+| IA-5 | Authenticator Management | Password policies and credential hygiene must be enforced |
+
+### SI — System and Information Integrity
+| Control | Name | Why It's Checked |
+|---|---|---|
+| SI-2 | Flaw Remediation | Systems must be patched within defined timeframes |
+
+## Severity Rating Guide
+
+| Severity | Meaning | Response Time |
+|---|---|---|
+| CRITICAL | Immediate risk | Remediate within 24 hours |
+| HIGH | Significant gap | Remediate within 7 days |
+| MEDIUM | Control weakness | Remediate within 30 days |
+| INFO | Passing check | Document as evidence |

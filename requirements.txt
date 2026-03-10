@@ -1,0 +1,3 @@
+# No external libraries needed for local mode — uses Python standard library only.
+# When AWS mode is added, boto3 will be required:
+# boto3==1.34.0
