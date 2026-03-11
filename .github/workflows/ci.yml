@@ -22,27 +22,3 @@ jobs:
         run: python -m pytest tests/test_collector.py -v
       - name: Run collector smoke test
         run: python src/collector.py
-```
-
-3. Save and close
-
----
-
-## Also Check This
-
-Go into your `tests` folder right now and confirm the file is named exactly:
-```
-test_collector.py
-```
-Not `Test_collector.py` or `test_Collector.py` — it must be all lowercase.
-
----
-
-## Push the Fix
-
-1. Open **GitHub Desktop**
-2. Switch to `compliance-evidence-collector` repo
-3. You'll see `ci.yml` listed as changed
-4. Summary box type:
-```
-   Fix: specify exact test file path in CI

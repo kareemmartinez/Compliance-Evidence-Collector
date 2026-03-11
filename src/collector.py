@@ -212,8 +212,3 @@ if __name__ == "__main__":
     generate_json_report(findings)
     generate_csv_report(findings)
     print("[+] Evidence collection complete. Reports saved to sample_output/\n")
-```
-
-
-
-
