@@ -1,0 +1,35 @@
+name: CVE Dashboard CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install dependencies
+        run: pip install pytest
+      - name: Run tests
+        run: python -m pytest tests/test_dashboard.py -v
+      - name: Smoke test (offline mode)
+        run: python src/dashboard.py
+```
+
+3. Save and close
+
+---
+
+## Push the Fix to GitHub
+
+1. Open **GitHub Desktop**
+2. You should see `ci.yml` listed as a changed file on the left
+3. In the Summary box type:
+```
+   Fix: update CI actions and specify test path
