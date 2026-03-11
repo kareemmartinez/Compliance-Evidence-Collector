@@ -1,4 +1,4 @@
-name: CVE Dashboard CI
+name: Compliance Collector CI
 
 on:
   push:
@@ -15,21 +15,12 @@ jobs:
         with:
           python-version: '3.11'
       - name: Install dependencies
-        run: pip install pytest
+        run: |
+          python -m pip install --upgrade pip
+          pip install pytest
       - name: Run tests
-        run: python -m pytest tests/test_dashboard.py -v
-      - name: Smoke test (offline mode)
-        run: python src/dashboard.py
+        run: python -m pytest tests/test_collector.py -v
+      - name: Run collector smoke test
+        run: python src/collector.py
 ```
 
-3. Save and close
-
----
-
-## Push the Fix to GitHub
-
-1. Open **GitHub Desktop**
-2. You should see `ci.yml` listed as a changed file on the left
-3. In the Summary box type:
-```
-   Fix: update CI actions and specify test path
