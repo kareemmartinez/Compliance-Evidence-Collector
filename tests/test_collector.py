@@ -74,21 +74,3 @@ def test_run_all_checks_combines_results():
     configs = len(check_configuration_settings())
     patches = len(check_patching())
     assert total == users + logging + configs + patches
-```
-
-3. Click **File → Save As**
-4. Navigate to `compliance-evidence-collector` → `tests` folder
-5. File name: `test_collector.py`
-6. Save as type: **All Files (*.*)**
-7. Click **Save**
-
----
-
-## Push to GitHub
-
-1. Open **GitHub Desktop**
-2. Switch to `compliance-evidence-collector` repo
-3. You'll see `test_collector.py` listed as a new file
-4. Summary box type:
-```
-   Add test_collector.py to tests folder
